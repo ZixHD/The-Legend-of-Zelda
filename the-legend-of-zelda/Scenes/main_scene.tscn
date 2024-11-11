@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7k7xb4h4bvg0"]
+
+[ext_resource type="PackedScene" uid="uid://bd5m7xwvaei6c" path="res://Scenes/main_char.tscn" id="1_hxp8p"]
+
+[sub_resource type="TileSet" id="TileSet_vxq5g"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(3, 3)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_vxq5g")
+format = 2
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hxp8p")]
+position = Vector2(118, 78)

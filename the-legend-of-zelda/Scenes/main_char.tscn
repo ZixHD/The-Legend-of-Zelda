@@ -1,0 +1,120 @@
+[gd_scene load_steps=11 format=3 uid="uid://bd5m7xwvaei6c"]
+
+[ext_resource type="Script" path="res://Scripts/main_char.gd" id="1_c31es"]
+[ext_resource type="Texture2D" uid="uid://bokmul14edt8e" path="res://Assets/SpriteSheets/NES - The Legend of Zelda - Link.png" id="2_kc5dl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_12shj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7d4u"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(1, 11, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhsrr"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(35, 11, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_datkb"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(69, 11, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qx84"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(18, 11, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8tlr7"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(52, 11, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc5kf"]
+atlas = ExtResource("2_kc5dl")
+region = Rect2(86, 11, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2nqa4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7d4u")
+}],
+"loop": false,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhsrr")
+}],
+"loop": false,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhsrr")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_datkb")
+}],
+"loop": false,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7d4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qx84")
+}],
+"loop": false,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhsrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tlr7")
+}],
+"loop": false,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhsrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8tlr7")
+}],
+"loop": false,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_datkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sc5kf")
+}],
+"loop": false,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_c31es")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_12shj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_2nqa4")
+animation = &"walk_up"
