@@ -5,7 +5,7 @@
 [sub_resource type="TileSet" id="TileSet_vxq5g"]
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_vxq5g")

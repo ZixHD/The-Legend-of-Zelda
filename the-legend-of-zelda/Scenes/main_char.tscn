@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bd5m7xwvaei6c"]
+[gd_scene load_steps=24 format=3 uid="uid://bd5m7xwvaei6c"]
 
 [ext_resource type="Script" path="res://Scripts/main_char.gd" id="1_c31es"]
 [ext_resource type="Texture2D" uid="uid://bokmul14edt8e" path="res://Assets/SpriteSheets/NES - The Legend of Zelda - Link.png" id="2_kc5dl"]
@@ -18,6 +18,22 @@ region = Rect2(35, 11, 16, 16)
 atlas = ExtResource("2_kc5dl")
 region = Rect2(69, 11, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhl8q"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(1, 47, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40abh"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(18, 47, 16, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rye1"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(35, 47, 16, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaypp"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(52, 47, 16, 19)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6n5f"]
 atlas = ExtResource("2_kc5dl")
 region = Rect2(1, 77, 16, 16)
@@ -33,6 +49,22 @@ region = Rect2(46, 77, 23, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_w5pc6"]
 atlas = ExtResource("3_frb5w")
 region = Rect2(70, 77, 19, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mp3e7"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(1, 109, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmbl4"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(18, 97, 16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7pkn"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(35, 98, 16, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6r0d"]
+atlas = ExtResource("3_frb5w")
+region = Rect2(52, 106, 16, 19)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2qx84"]
 atlas = ExtResource("2_kc5dl")
@@ -82,6 +114,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_yhl8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40abh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rye1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaypp")
+}],
+"loop": false,
+"name": &"melee_down",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_w6n5f")
 }, {
 "duration": 1.0,
@@ -95,6 +144,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"melee_left",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mp3e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmbl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7pkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6r0d")
+}],
+"loop": false,
+"name": &"melee_up",
 "speed": 10.0
 }, {
 "frames": [{
@@ -151,6 +217,4 @@ shape = SubResource("CapsuleShape2D_12shj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_2nqa4")
-animation = &"melee_left"
-frame = 3
-frame_progress = 1.0
+animation = &"melee_down"
