@@ -601,3 +601,7 @@ tile_set = SubResource("TileSet_vxq5g")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_hxp8p")]
 position = Vector2(118, 78)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 27624.0
+offset_bottom = 9224.0
